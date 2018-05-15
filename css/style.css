@@ -1,0 +1,243 @@
+/*
+Colores al MENU *
+media QUERY para los inputs en MOVIL*
+scrip disponible para todas las paginas
+chequear unused css
+*/
+
+body {
+  font-family: 'Roboto', sans-serif/*"Century Gothic"*/;
+  margin: 0;
+  background: linear-gradient(rgba(77,35,50,0), rgba(77,35,50,0.3));
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  /*VERTICAL*/
+  justify-content: space-evenly;  /*HORIZONTAL*/
+}
+
+.primary-text {
+  color: #964360;
+}
+
+/*.presentacion{
+  text-align: center;
+}*/
+
+nav {
+  text-transform: uppercase;
+}
+
+.head-left a, nav a{
+  text-decoration: none;
+  color: #000;
+}
+
+/*DESKTOP QUERY*/
+
+@media screen and (min-width:675px) {
+  .menu .current, nav a:hover {
+    color: #964360;
+    border-bottom: 3px solid #964360;
+    padding-bottom: 3px;
+  }
+  .menu a {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 1.5em;
+  }
+  .hrmovil {
+    display: none;
+  }
+}
+
+/*OVERLAY*/
+
+.overlay {
+  background-image: url('../img/growingup.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  max-width: 100%;
+  background-position: center;
+  margin: 0;
+}
+
+.overlay h2, .overlay p {
+  color: #FFF;
+  margin-top: 0;
+}
+
+.overlay h2 {
+  line-height: 60px;
+}
+
+#hr-remove {
+  margin: 0;
+}
+
+/*CONTAINER-MAIN*/
+
+form span{
+  color: crimson;
+  font-weight: bold;
+  font-family:'Roboto';/*arial;*/
+  font-size: 14px;
+  padding-top: 0;
+
+}
+
+#tbx_nombre, #tbx_email, #tbx_mensaje{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cmain {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 30px;
+}
+
+.cmain input {
+  height: 25px;
+}
+
+.cmain textarea {
+  height: 40px;
+  vertical-align: top;
+}
+
+.cmain input, textarea {
+  width: 40%;
+  margin: 10px;
+}
+
+/*---BUTTON--*/
+
+.cmain button {
+  width: 20%;
+  height: 30px;
+  background-color: white;
+  color: #7b374f;
+  border: 2px solid #7b374f;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.cmain button:hover {
+  background-color: #7b374f;
+  color: white;
+}
+
+/*------*/
+
+.cmain label, form button {
+  font-weight: bold;
+}
+
+.cmain h2, form {
+  text-align: center;
+}
+
+.paracont {
+  text-align: center;
+}
+
+#message{
+  padding-bottom: 10px;
+}
+/*FOOTER*/
+
+/*esto se puede eliminar si cambiamos la clase a
+foot left, foot center, foot right. entonces solo
+llamamos a foot, y despues para definir los Colores
+especificamos .foot left*/
+
+.foot-left, .foot-center, .foot-right {
+  padding: 10px;
+  margin-right: 10px;
+  width: calc((100% - 80px)/3);
+}
+
+.foot-right {
+  margin-right: 0;
+}
+
+.foot-left, .foot-center, .foot-right {
+  background-color: #7b374f;
+}
+
+.copy {
+  background: #000;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+}
+
+.copy h6 {
+  margin: 2px;
+}
+
+/*BURGER*/
+
+.label-head {
+  margin: 0 5px 0 0;
+  font-size: 26px;
+  line-height: 50px;
+  display: none;
+}
+
+#toogle {
+  display: none;
+}
+
+/*MOVIL QUERY*/
+
+@media screen and (max-width:675px) {
+  .cmain input, textarea {
+    width: 90%;
+    margin: 5px;
+  }
+  .cmain button {
+    width: 40%;
+  }
+  .head-left, .head-right {
+    text-align: center;
+    width: 100%;
+  }
+  .label-head {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .menu a:hover {
+    background: rgb(59, 26, 38, 0.3);
+  }
+  .menu a {
+    display: block;
+    border-bottom: 1px solid #964360;
+    margin: 0;
+    padding: 1em 0 1em 0;
+    background: rgb(59, 26, 38, 0.15);
+  }
+  .menu a:first-child {
+    border-top: 1px solid #964360;
+  }
+  #toogle:checked+.menu {
+    display: block;
+  }
+  /*FOOTER QUERY*/
+  .foot-left, .foot-center, .foot-right {
+    width: 100%;
+    margin: 2px;
+  }
+  .copy {
+    margin: 2px;
+  }
+}

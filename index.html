@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--AGREGAR COMAPTIBILIDAD EDGE-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
+  <script type="text/javascript" src="js/validar.js" defer></script><!--el script no se ejecutara hasta que la pagina se carge causaba error  "Cannot read property 'addEventListener' of null"-->
+  <title>GrowUP | Inicio</title>
+</head>
+<!--NAV-->
+
+<body>
+  <header>
+    <div class="container">
+      <div class="head-left">
+        <a href="index.html"><h1><span class="primary-text">Grow</span>Up</h1></a>
+        <hr class="hrmovil">
+      </div>
+      <div class="head-right">
+        <nav>
+          <label class="label-head" for="toogle">&#9776; MENU</label>
+          <input type="checkbox" id="toogle" onchange="removeHr()">
+          <div class="menu">
+            <a class="current" href="index.html">Inicio</a>
+            <a href="nosotros.html">nosotros</a>
+            <a href="coaching.html">Coaching</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <hr id="hr-remove">
+  <!--MAIN-->
+  <section>
+    <div class="overlay">
+      <h2>GrowUp <span class="primary-text">Coaching</span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="cmain">
+        <h2><span class="primary-text">Contáctanos</span></h2>
+        <p class="paracont">Complete los campos para comunicarse con nosotros</p>
+        <form id="contacto" method="post" action="contact.php">
+          <label for="tbx_nombre">Nombre</label><br>
+          <input onclick="getId(event)" type="text" name="name" id="tbx_nombre"> <br>
+          <span id="nombre"></span> <br>
+          <label for="tbx_email">Email</label><br>
+          <input onclick="getId(event)" type="text" name="email" id=tbx_email><br>
+          <span id="email"></span> <br>
+          <label for="tbx_mensaje">Mensaje</label><br>
+          <textarea onclick="getId(event)" name="message" id="tbx_mensaje"></textarea><br>
+          <span id="mensaje"></span> <br>
+          <button type="submit" name="button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="foot-left">
+        <h4>Contacto</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <!--<p>&#9742;</p>
+        <p>&#9993;</p>
+      &#x2706;-->
+      </div>
+      <div class="foot-center">
+        <h4>Nosotros</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="foot-right">
+        <h4>Newsletter</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="copy">
+      <h6>Copyright &copy; 2018 | GrowUp</h6>
+    </div>
+  </footer>
+</body>
+
+</html>
